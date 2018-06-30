@@ -1,0 +1,134 @@
+[comment encoding = UTF-8 /]
+[module generate('http://www.example.org/meimodel',
+				 'http://www.eclipse.org/emf/2002/Ecore')/]
+
+[template public generateElement(grupoMEI : GrupoMEI)]
+
+[comment @main /]
+[file ('index.html', false)]
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Grupo [grupoMEI.nomeDoGrupo /]</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  </head>
+  <body>
+
+	[for (p : ProfissionalMEI | grupoMEI.profissionais)]
+  	<section class="hero is-primary">
+	  <div class="hero-body">
+    	<div class="container">
+	      <h1 class="title">
+	        Profissional: [if (p.nome <> null)][p.nome/][else]Não informado[/if]
+	      </h1>
+		[for (a : EAttribute  | p.eClass().eAllAttributes)]
+	 		[if (p.eGet(a.name).toString().size() > 0)]
+			<strong>[a.name.toUpperFirst() /]</strong>: [p.eGet(a.name)/]
+			<br>
+			[/if]
+		[/for]
+		</div>
+	  </div>
+	</section>
+
+	<section class="hero is-light">
+	  <div class="hero-body">
+	    <div class="container">
+			<h3 class="title">
+				Categoria de Vendas
+			</h3>
+			<div class="content">
+				[let categorias : Sequence(CategoriaDeVendas) = p.eContents(CategoriaDeVendas)]
+					[if (categorias -> size() = 0)]
+						Não há categorias ou vendas
+					[else]
+						[for (categoria : CategoriaDeVendas  | categorias)]
+						<ul>					
+						<li>
+							<strong>[categoria.categoria /]</strong>
+						</li>
+						</ul>
+						<nav class="level">
+						[let vendas : Sequence(Venda) = categoria.eContents(Venda)]
+							[if (vendas -> size() = 0)]
+								Não há vendas nesta categoria
+							[else]
+							  [for (venda : Venda | vendas)]
+							  <div class="level-item has-text-centered">
+							    <div>
+							      <p class="title">
+										R$ [venda.valor /]
+								  </p>
+							      <p class="heading">
+										[if (venda.cliente.oclIsKindOf(PessoaFisica))]
+										<strong>Cliente Físico:</strong> [venda.cliente.eGet('nome') /]
+										[/if]		
+										[if (venda.cliente.oclIsKindOf(PessoaJuridica))]
+										<strong>Cliente Jurídico:</strong> [venda.cliente.eGet('nomeFantasia') /]
+										[/if]
+								  </p>
+							      <p class="heading">
+										[venda.descricao /]
+								  </p>
+							    </div>
+							  </div>
+							  [/for]
+							[/if]
+						[/let]
+						</nav>
+						[/for]
+					[/if]
+				[/let]
+			</div>
+
+			<h3 class="title">
+				Categoria de Despesas
+			</h3>
+			<div class="content">
+				[let categorias : Sequence(CategoriaDeDespesas) = p.eContents(CategoriaDeDespesas)]
+					[if (categorias -> size() = 0)]
+						Não há categorias ou despesas
+					[else]
+						[for (categoria : CategoriaDeDespesas | categorias)]
+						<ul>					
+						<li>
+							<strong>[categoria.categoria /]</strong>
+						</li>
+						</ul>
+						<nav class="level">
+						[let despesas : Sequence(Despesa) = categoria.eContents(Despesa)]
+							[if (despesas -> size() = 0)]
+								Não há despesas nesta categoria
+							[else]
+							  [for (despesa : Despesa | despesas)]
+							  <div class="level-item has-text-centered">
+							    <div>
+							      <p class="title">
+										R$ [despesa.valor /]
+								  </p>
+							      <p class="heading">
+										[despesa.descricao /]
+								  </p>
+							    </div>
+							  </div>
+							  [/for]
+							[/if]
+						[/let]
+						</nav>
+						[/for]
+					[/if]
+				[/let]
+			</div>
+	    </div>
+	  </div>
+	</section>
+
+	[/for]
+  </body>
+</html>
+[/file]
+
+[/template]

@@ -1,0 +1,1488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="generate" nsURI="org::eclipse::acceleo::module::sample::main::generate" startHeaderPosition="29" endHeaderPosition="126">
+    <input>
+      <takesTypesFrom href="http://www.example.org/meimodel#/"/>
+    </input>
+    <input>
+      <takesTypesFrom href="http://www.eclipse.org/emf/2002/Ecore#/"/>
+    </input>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateElement" visibility="Public" main="true">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;!DOCTYPE html>&#xA;&lt;html>&#xA;  &lt;head>&#xA;    &lt;meta charset=&quot;utf-8&quot;>&#xA;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>&#xA;&#x9;&lt;title>Grupo "/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="grupoMEI" referredVariable="/0/generateElement/grupoMEI">
+            <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//GrupoMEI"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.example.org/meimodel#//GrupoMEI/nomeDoGrupo"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/title>&#xA;    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css&quot;>&#xA;    &lt;script defer src=&quot;https://use.fontawesome.com/releases/v5.0.7/js/all.js&quot;>&lt;/script>&#xA;  &lt;/head>&#xA;  &lt;body>&#xA;&#xA;"/>
+        <body xsi:type="mtl:ForBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="  &#x9;&lt;section class=&quot;hero is-primary&quot;>&#xA;&#x9;  &lt;div class=&quot;hero-body&quot;>&#xA;    &#x9;&lt;div class=&quot;container&quot;>&#xA;&#x9;      &lt;h1 class=&quot;title&quot;>&#xA;&#x9;        Profissional: "/>
+          <body xsi:type="mtl:IfBlock">
+            <body xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/generateElement/%.1/%.3/p">
+                <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//ProfissionalMEI"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://www.example.org/meimodel#//PessoaFisica/nome"/>
+            </body>
+            <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+              <source xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/generateElement/%.1/%.3/p">
+                  <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//ProfissionalMEI"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="http://www.example.org/meimodel#//PessoaFisica/nome"/>
+              </source>
+              <argument xsi:type="ocl.ecore:NullLiteralExp">
+                <eType xsi:type="ocl.ecore:VoidType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclVoid"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/%3C%3E"/>
+            </ifExpr>
+            <else>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Não informado"/>
+            </else>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;      &lt;/h1>&#xA;"/>
+          <body xsi:type="mtl:ForBlock">
+            <body xsi:type="mtl:IfBlock">
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&lt;strong>"/>
+              <body xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/toUpperFirst">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:PropertyCallExp">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <source xsi:type="ocl.ecore:VariableExp" name="a" referredVariable="/0/generateElement/%.1/%.3/%.3/a">
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+                  </source>
+                  <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/emf/2002/Ecore#//ENamedElement/name"/>
+                </source>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/strong>: "/>
+              <body xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/ecore_EObject_Class/eGet">
+                <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/generateElement/%.1/%.3/p">
+                  <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//ProfissionalMEI"/>
+                </source>
+                <argument xsi:type="ocl.ecore:PropertyCallExp">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <source xsi:type="ocl.ecore:VariableExp" name="a" referredVariable="/0/generateElement/%.1/%.3/%.3/a">
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+                  </source>
+                  <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/emf/2002/Ecore#//ENamedElement/name"/>
+                </argument>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;&#x9;&#x9;&lt;br>&#xA;"/>
+              <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+                <source xsi:type="ocl.ecore:OperationCallExp">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                  <source xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_OclAny_Class/toString">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    <source xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/ecore_EObject_Class/eGet">
+                      <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+                      <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/generateElement/%.1/%.3/p">
+                        <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//ProfissionalMEI"/>
+                      </source>
+                      <argument xsi:type="ocl.ecore:PropertyCallExp">
+                        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                        <source xsi:type="ocl.ecore:VariableExp" name="a" referredVariable="/0/generateElement/%.1/%.3/%.3/a">
+                          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+                        </source>
+                        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/emf/2002/Ecore#//ENamedElement/name"/>
+                      </argument>
+                    </source>
+                  </source>
+                  <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/size"/>
+                </source>
+                <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="0">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                </argument>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/%3E"/>
+              </ifExpr>
+            </body>
+            <loopVariable name="a">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+            </loopVariable>
+            <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/8/OrderedSet(EAttribute)">
+              <source xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/generateElement/%.1/%.3/p">
+                  <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//ProfissionalMEI"/>
+                </source>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/emf/2002/Ecore#//EObject/eClass"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllAttributes"/>
+            </iterSet>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&lt;/div>&#xA;&#x9;  &lt;/div>&#xA;&#x9;&lt;/section>&#xA;&#xA;&#x9;&lt;section class=&quot;hero is-light&quot;>&#xA;&#x9;  &lt;div class=&quot;hero-body&quot;>&#xA;&#x9;    &lt;div class=&quot;container&quot;>&#xA;&#x9;&#x9;&#x9;&lt;h3 class=&quot;title&quot;>&#xA;&#x9;&#x9;&#x9;&#x9;Categoria de Vendas&#xA;&#x9;&#x9;&#x9;&lt;/h3>&#xA;&#x9;&#x9;&#x9;&lt;div class=&quot;content&quot;>&#xA;"/>
+          <body xsi:type="mtl:LetBlock">
+            <body xsi:type="mtl:IfBlock">
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Não há categorias ou vendas&#xA;"/>
+              <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+                <source xsi:type="ocl.ecore:OperationCallExp">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                  <source xsi:type="ocl.ecore:VariableExp" name="categorias" eType="/8/Sequence(CategoriaDeVendas)" referredVariable="/0/generateElement/%.1/%.3/%.5/categorias"/>
+                  <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/size"/>
+                </source>
+                <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="0">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                </argument>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/="/>
+              </ifExpr>
+              <else>
+                <body xsi:type="mtl:ForBlock">
+                  <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;ul>&#x9;&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;li>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;strong>"/>
+                  <body xsi:type="ocl.ecore:PropertyCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="categoria" referredVariable="/0/generateElement/%.1/%.3/%.5/%/%.2/%/categoria">
+                      <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//CategoriaDeVendas"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EAttribute" href="http://www.example.org/meimodel#//CategoriaDeVendas/categoria"/>
+                  </body>
+                  <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/strong>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/li>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/ul>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;nav class=&quot;level&quot;>&#xA;"/>
+                  <body xsi:type="mtl:LetBlock">
+                    <body xsi:type="mtl:IfBlock">
+                      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Não há vendas nesta categoria&#xA;"/>
+                      <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+                        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+                        <source xsi:type="ocl.ecore:OperationCallExp">
+                          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                          <source xsi:type="ocl.ecore:VariableExp" name="vendas" eType="/8/Sequence(Venda)" referredVariable="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/vendas"/>
+                          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/size"/>
+                        </source>
+                        <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="0">
+                          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                        </argument>
+                        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/="/>
+                      </ifExpr>
+                      <else>
+                        <body xsi:type="mtl:ForBlock">
+                          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;  &lt;div class=&quot;level-item has-text-centered&quot;>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;    &lt;div>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;      &lt;p class=&quot;title&quot;>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;R$ "/>
+                          <body xsi:type="ocl.ecore:PropertyCallExp">
+                            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+                            <source xsi:type="ocl.ecore:VariableExp" name="venda" referredVariable="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/venda">
+                              <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//Venda"/>
+                            </source>
+                            <referredProperty xsi:type="ecore:EAttribute" href="http://www.example.org/meimodel#//Venda/valor"/>
+                          </body>
+                          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;  &lt;/p>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;      &lt;p class=&quot;heading&quot;>&#xA;"/>
+                          <body xsi:type="mtl:IfBlock">
+                            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;strong>Cliente Físico:&lt;/strong> "/>
+                            <body xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/ecore_EObject_Class/eGet">
+                              <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+                              <source xsi:type="ocl.ecore:PropertyCallExp">
+                                <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//Cliente"/>
+                                <source xsi:type="ocl.ecore:VariableExp" name="venda" referredVariable="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/venda">
+                                  <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//Venda"/>
+                                </source>
+                                <referredProperty xsi:type="ecore:EReference" href="http://www.example.org/meimodel#//Venda/cliente"/>
+                              </source>
+                              <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="nome">
+                                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                              </argument>
+                            </body>
+                            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+                            <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+                              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+                              <source xsi:type="ocl.ecore:PropertyCallExp">
+                                <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//Cliente"/>
+                                <source xsi:type="ocl.ecore:VariableExp" name="venda" referredVariable="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/venda">
+                                  <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//Venda"/>
+                                </source>
+                                <referredProperty xsi:type="ecore:EReference" href="http://www.example.org/meimodel#//Venda/cliente"/>
+                              </source>
+                              <argument xsi:type="ocl.ecore:TypeExp" eType="/20/PessoaFisica">
+                                <referredType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//PessoaFisica"/>
+                              </argument>
+                              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsKindOf"/>
+                            </ifExpr>
+                          </body>
+                          <body xsi:type="mtl:IfBlock">
+                            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;strong>Cliente Jurídico:&lt;/strong> "/>
+                            <body xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/ecore_EObject_Class/eGet">
+                              <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+                              <source xsi:type="ocl.ecore:PropertyCallExp">
+                                <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//Cliente"/>
+                                <source xsi:type="ocl.ecore:VariableExp" name="venda" referredVariable="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/venda">
+                                  <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//Venda"/>
+                                </source>
+                                <referredProperty xsi:type="ecore:EReference" href="http://www.example.org/meimodel#//Venda/cliente"/>
+                              </source>
+                              <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="nomeFantasia">
+                                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                              </argument>
+                            </body>
+                            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+                            <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+                              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+                              <source xsi:type="ocl.ecore:PropertyCallExp">
+                                <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//Cliente"/>
+                                <source xsi:type="ocl.ecore:VariableExp" name="venda" referredVariable="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/venda">
+                                  <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//Venda"/>
+                                </source>
+                                <referredProperty xsi:type="ecore:EReference" href="http://www.example.org/meimodel#//Venda/cliente"/>
+                              </source>
+                              <argument xsi:type="ocl.ecore:TypeExp" eType="/20/PessoaJuridica">
+                                <referredType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//PessoaJuridica"/>
+                              </argument>
+                              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsKindOf"/>
+                            </ifExpr>
+                          </body>
+                          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;  &lt;/p>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;      &lt;p class=&quot;heading&quot;>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;"/>
+                          <body xsi:type="ocl.ecore:PropertyCallExp">
+                            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                            <source xsi:type="ocl.ecore:VariableExp" name="venda" referredVariable="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/venda">
+                              <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//Venda"/>
+                            </source>
+                            <referredProperty xsi:type="ecore:EAttribute" href="http://www.example.org/meimodel#//Venda/descricao"/>
+                          </body>
+                          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;  &lt;/p>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;    &lt;/div>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;  &lt;/div>&#xA;"/>
+                          <loopVariable name="venda">
+                            <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//Venda"/>
+                          </loopVariable>
+                          <iterSet xsi:type="ocl.ecore:VariableExp" name="vendas" eType="/8/Sequence(Venda)" referredVariable="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/vendas"/>
+                        </body>
+                      </else>
+                    </body>
+                    <letVariable name="vendas" eType="/8/Sequence(Venda)">
+                      <initExpression xsi:type="ocl.ecore:OperationCallExp" eType="/8/Sequence(Venda)" referredOperation="/1/ecore_EObject_Class/eContents">
+                        <source xsi:type="ocl.ecore:VariableExp" name="categoria" referredVariable="/0/generateElement/%.1/%.3/%.5/%/%.2/%/categoria">
+                          <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//CategoriaDeVendas"/>
+                        </source>
+                        <argument xsi:type="ocl.ecore:TypeExp" eType="/20/Venda">
+                          <referredType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//Venda"/>
+                        </argument>
+                      </initExpression>
+                    </letVariable>
+                  </body>
+                  <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/nav>&#xA;"/>
+                  <loopVariable name="categoria">
+                    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//CategoriaDeVendas"/>
+                  </loopVariable>
+                  <iterSet xsi:type="ocl.ecore:VariableExp" name="categorias" eType="/8/Sequence(CategoriaDeVendas)" referredVariable="/0/generateElement/%.1/%.3/%.5/categorias"/>
+                </body>
+              </else>
+            </body>
+            <letVariable name="categorias" eType="/8/Sequence(CategoriaDeVendas)">
+              <initExpression xsi:type="ocl.ecore:OperationCallExp" eType="/8/Sequence(CategoriaDeVendas)" referredOperation="/1/ecore_EObject_Class/eContents">
+                <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/generateElement/%.1/%.3/p">
+                  <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//ProfissionalMEI"/>
+                </source>
+                <argument xsi:type="ocl.ecore:TypeExp" eType="/20/CategoriaDeVendas">
+                  <referredType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//CategoriaDeVendas"/>
+                </argument>
+              </initExpression>
+            </letVariable>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&lt;/div>&#xA;&#xA;&#x9;&#x9;&#x9;&lt;h3 class=&quot;title&quot;>&#xA;&#x9;&#x9;&#x9;&#x9;Categoria de Despesas&#xA;&#x9;&#x9;&#x9;&lt;/h3>&#xA;&#x9;&#x9;&#x9;&lt;div class=&quot;content&quot;>&#xA;"/>
+          <body xsi:type="mtl:LetBlock">
+            <body xsi:type="mtl:IfBlock">
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Não há categorias ou despesas&#xA;"/>
+              <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+                <source xsi:type="ocl.ecore:OperationCallExp">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                  <source xsi:type="ocl.ecore:VariableExp" name="categorias" eType="/8/Sequence(CategoriaDeDespesas)" referredVariable="/0/generateElement/%.1/%.3/%.7/categorias"/>
+                  <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/size"/>
+                </source>
+                <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="0">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                </argument>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/="/>
+              </ifExpr>
+              <else>
+                <body xsi:type="mtl:ForBlock">
+                  <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;ul>&#x9;&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;li>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;strong>"/>
+                  <body xsi:type="ocl.ecore:PropertyCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="categoria" referredVariable="/0/generateElement/%.1/%.3/%.7/%/%.2/%/categoria">
+                      <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//CategoriaDeDespesas"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EAttribute" href="http://www.example.org/meimodel#//CategoriaDeDespesas/categoria"/>
+                  </body>
+                  <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/strong>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/li>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/ul>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;nav class=&quot;level&quot;>&#xA;"/>
+                  <body xsi:type="mtl:LetBlock">
+                    <body xsi:type="mtl:IfBlock">
+                      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Não há despesas nesta categoria&#xA;"/>
+                      <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+                        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+                        <source xsi:type="ocl.ecore:OperationCallExp">
+                          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                          <source xsi:type="ocl.ecore:VariableExp" name="despesas" eType="/8/Sequence(Despesa)" referredVariable="/0/generateElement/%.1/%.3/%.7/%/%.2/%/%.3/despesas"/>
+                          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/size"/>
+                        </source>
+                        <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="0">
+                          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                        </argument>
+                        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/="/>
+                      </ifExpr>
+                      <else>
+                        <body xsi:type="mtl:ForBlock">
+                          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;  &lt;div class=&quot;level-item has-text-centered&quot;>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;    &lt;div>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;      &lt;p class=&quot;title&quot;>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;R$ "/>
+                          <body xsi:type="ocl.ecore:PropertyCallExp">
+                            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+                            <source xsi:type="ocl.ecore:VariableExp" name="despesa" referredVariable="/0/generateElement/%.1/%.3/%.7/%/%.2/%/%.3/%/%.2/%/despesa">
+                              <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//Despesa"/>
+                            </source>
+                            <referredProperty xsi:type="ecore:EAttribute" href="http://www.example.org/meimodel#//Despesa/valor"/>
+                          </body>
+                          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;  &lt;/p>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;      &lt;p class=&quot;heading&quot;>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;"/>
+                          <body xsi:type="ocl.ecore:PropertyCallExp">
+                            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                            <source xsi:type="ocl.ecore:VariableExp" name="despesa" referredVariable="/0/generateElement/%.1/%.3/%.7/%/%.2/%/%.3/%/%.2/%/despesa">
+                              <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//Despesa"/>
+                            </source>
+                            <referredProperty xsi:type="ecore:EAttribute" href="http://www.example.org/meimodel#//Despesa/descricao"/>
+                          </body>
+                          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;  &lt;/p>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;    &lt;/div>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;  &lt;/div>&#xA;"/>
+                          <loopVariable name="despesa">
+                            <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//Despesa"/>
+                          </loopVariable>
+                          <iterSet xsi:type="ocl.ecore:VariableExp" name="despesas" eType="/8/Sequence(Despesa)" referredVariable="/0/generateElement/%.1/%.3/%.7/%/%.2/%/%.3/despesas"/>
+                        </body>
+                      </else>
+                    </body>
+                    <letVariable name="despesas" eType="/8/Sequence(Despesa)">
+                      <initExpression xsi:type="ocl.ecore:OperationCallExp" eType="/8/Sequence(Despesa)" referredOperation="/1/ecore_EObject_Class/eContents">
+                        <source xsi:type="ocl.ecore:VariableExp" name="categoria" referredVariable="/0/generateElement/%.1/%.3/%.7/%/%.2/%/categoria">
+                          <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//CategoriaDeDespesas"/>
+                        </source>
+                        <argument xsi:type="ocl.ecore:TypeExp" eType="/20/Despesa">
+                          <referredType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//Despesa"/>
+                        </argument>
+                      </initExpression>
+                    </letVariable>
+                  </body>
+                  <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/nav>&#xA;"/>
+                  <loopVariable name="categoria">
+                    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//CategoriaDeDespesas"/>
+                  </loopVariable>
+                  <iterSet xsi:type="ocl.ecore:VariableExp" name="categorias" eType="/8/Sequence(CategoriaDeDespesas)" referredVariable="/0/generateElement/%.1/%.3/%.7/categorias"/>
+                </body>
+              </else>
+            </body>
+            <letVariable name="categorias" eType="/8/Sequence(CategoriaDeDespesas)">
+              <initExpression xsi:type="ocl.ecore:OperationCallExp" eType="/8/Sequence(CategoriaDeDespesas)" referredOperation="/1/ecore_EObject_Class/eContents">
+                <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/generateElement/%.1/%.3/p">
+                  <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//ProfissionalMEI"/>
+                </source>
+                <argument xsi:type="ocl.ecore:TypeExp" eType="/20/CategoriaDeDespesas">
+                  <referredType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//CategoriaDeDespesas"/>
+                </argument>
+              </initExpression>
+            </letVariable>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&lt;/div>&#xA;&#x9;    &lt;/div>&#xA;&#x9;  &lt;/div>&#xA;&#x9;&lt;/section>&#xA;&#xA;"/>
+          <loopVariable name="p">
+            <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//ProfissionalMEI"/>
+          </loopVariable>
+          <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/8/OrderedSet(ProfissionalMEI)">
+            <source xsi:type="ocl.ecore:VariableExp" name="grupoMEI" referredVariable="/0/generateElement/grupoMEI">
+              <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//GrupoMEI"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.example.org/meimodel#//GrupoMEI/profissionais"/>
+          </iterSet>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="  &lt;/body>&#xA;&lt;/html>&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="index.html">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </fileUrl>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <parameter name="grupoMEI">
+        <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//GrupoMEI"/>
+      </parameter>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+      <eOperations name="toUpperFirst">
+        <eAnnotations source="MTL"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ecore_EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="eContents">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:SequenceType" href="http://www.eclipse.org/acceleo/mtl/3.0/mtlnonstdlib.ecore#//Sequence(OclAny)"/>
+        <eParameters name="filter">
+          <eType xsi:type="ocl.ecore:TypeType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclType"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="eGet">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        <eParameters name="featureName">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateElement">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateElement"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="grupoMEI">
+          <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//GrupoMEI"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+      <eOperations name="toString">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="meimodel_GrupoMEI_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.example.org/meimodel#//GrupoMEI"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//GrupoMEI"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//GrupoMEI"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//GrupoMEI"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//GrupoMEI"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(ProfissionalMEI)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//ProfissionalMEI"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(EAttribute)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(OclAny)" instanceClassName="java.util.List">
+      <elementType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(CategoriaDeVendas)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//CategoriaDeVendas"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(Venda)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//Venda"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(CategoriaDeDespesas)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//CategoriaDeDespesas"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(Despesa)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//Despesa"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//GrupoMEI"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//ProfissionalMEI"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//ProfissionalMEI"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//ProfissionalMEI"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//ProfissionalMEI"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//ProfissionalMEI"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="types">
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="CategoriaDeVendas">
+      <referredType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//CategoriaDeVendas"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="Venda">
+      <referredType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//Venda"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="PessoaFisica">
+      <referredType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//PessoaFisica"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="PessoaJuridica">
+      <referredType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//PessoaJuridica"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="CategoriaDeDespesas">
+      <referredType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//CategoriaDeDespesas"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="Despesa">
+      <referredType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//Despesa"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//ProfissionalMEI"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//ProfissionalMEI"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//ProfissionalMEI"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//CategoriaDeVendas"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//CategoriaDeVendas"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//CategoriaDeVendas"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//CategoriaDeVendas"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//CategoriaDeVendas"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//Venda"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//Venda"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//Venda"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//Venda"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//Venda"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//Venda"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//Venda"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//CategoriaDeVendas"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//ProfissionalMEI"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//ProfissionalMEI"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//ProfissionalMEI"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//ProfissionalMEI"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//CategoriaDeDespesas"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//CategoriaDeDespesas"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//CategoriaDeDespesas"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//CategoriaDeDespesas"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//CategoriaDeDespesas"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//Despesa"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//Despesa"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//Despesa"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//CategoriaDeDespesas"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//ProfissionalMEI"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.example.org/meimodel#//GrupoMEI"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/generateElement">
+      <details key="start" value="130"/>
+      <details key="end" value="3627"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/generateElement/%">
+      <details key="start" value="185"/>
+      <details key="end" value="186"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/generateElement/%.1">
+      <details key="start" value="204"/>
+      <details key="end" value="3614"/>
+      <details key="line" value="8"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/generateElement/%.1/%">
+      <details key="start" value="233"/>
+      <details key="end" value="379"/>
+      <details key="line" value="9"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/generateElement/%.1/%.1">
+      <details key="start" value="380"/>
+      <details key="end" value="400"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/generateElement/%.1/%.1/grupoMEI">
+      <details key="start" value="380"/>
+      <details key="end" value="388"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/generateElement/%.1/%.2">
+      <details key="start" value="403"/>
+      <details key="end" value="624"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/generateElement/%.1/%.3">
+      <details key="start" value="625"/>
+      <details key="end" value="3588"/>
+      <details key="line" value="20"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/generateElement/%.1/%.3/%">
+      <details key="start" value="678"/>
+      <details key="end" value="820"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/generateElement/%.1/%.3/%.1">
+      <details key="start" value="820"/>
+      <details key="end" value="874"/>
+      <details key="line" value="25"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/generateElement/%.1/%.3/%.1/%">
+      <details key="start" value="842"/>
+      <details key="end" value="848"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/generateElement/%.1/%.3/%.1/%/p">
+      <details key="start" value="842"/>
+      <details key="end" value="843"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/generateElement/%.1/%.3/%.1/%.1">
+      <details key="start" value="824"/>
+      <details key="end" value="840"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/generateElement/%.1/%.3/%.1/%.1/%">
+      <details key="start" value="825"/>
+      <details key="end" value="831"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/generateElement/%.1/%.3/%.1/%.1/%/p">
+      <details key="start" value="825"/>
+      <details key="end" value="826"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/generateElement/%.1/%.3/%.1/%.1/%.1">
+      <details key="start" value="835"/>
+      <details key="end" value="839"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/generateElement/%.1/%.3/%.1/%.2">
+      <details key="start" value="850"/>
+      <details key="end" value="869"/>
+      <details key="line" value="25"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/generateElement/%.1/%.3/%.1/%.2/%">
+      <details key="start" value="856"/>
+      <details key="end" value="869"/>
+      <details key="line" value="25"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/generateElement/%.1/%.3/%.2">
+      <details key="start" value="874"/>
+      <details key="end" value="888"/>
+      <details key="line" value="26"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/generateElement/%.1/%.3/%.3">
+      <details key="start" value="890"/>
+      <details key="end" value="1080"/>
+      <details key="line" value="27"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/generateElement/%.1/%.3/%.3/%">
+      <details key="start" value="946"/>
+      <details key="end" value="1071"/>
+      <details key="line" value="28"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/generateElement/%.1/%.3/%.3/%/%">
+      <details key="start" value="990"/>
+      <details key="end" value="1001"/>
+      <details key="line" value="29"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/generateElement/%.1/%.3/%.3/%/%.1">
+      <details key="start" value="1002"/>
+      <details key="end" value="1023"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/generateElement/%.1/%.3/%.3/%/%.1/%">
+      <details key="start" value="1002"/>
+      <details key="end" value="1008"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/generateElement/%.1/%.3/%.3/%/%.1/%/a">
+      <details key="start" value="1002"/>
+      <details key="end" value="1003"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/generateElement/%.1/%.3/%.3/%/%.2">
+      <details key="start" value="1026"/>
+      <details key="end" value="1037"/>
+      <details key="line" value="29"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/generateElement/%.1/%.3/%.3/%/%.3">
+      <details key="start" value="1038"/>
+      <details key="end" value="1052"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/generateElement/%.1/%.3/%.3/%/%.3/p">
+      <details key="start" value="1038"/>
+      <details key="end" value="1039"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/generateElement/%.1/%.3/%.3/%/%.3/%">
+      <details key="start" value="1045"/>
+      <details key="end" value="1051"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/generateElement/%.1/%.3/%.3/%/%.3/%/a">
+      <details key="start" value="1045"/>
+      <details key="end" value="1046"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/generateElement/%.1/%.3/%.3/%/%.4">
+      <details key="start" value="1054"/>
+      <details key="end" value="1063"/>
+      <details key="line" value="30"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/generateElement/%.1/%.3/%.3/%/%.5">
+      <details key="start" value="950"/>
+      <details key="end" value="988"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/generateElement/%.1/%.3/%.3/%/%.5/%">
+      <details key="start" value="951"/>
+      <details key="end" value="983"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/generateElement/%.1/%.3/%.3/%/%.5/%/%">
+      <details key="start" value="951"/>
+      <details key="end" value="976"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/generateElement/%.1/%.3/%.3/%/%.5/%/%/%">
+      <details key="start" value="951"/>
+      <details key="end" value="965"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/generateElement/%.1/%.3/%.3/%/%.5/%/%/%/p">
+      <details key="start" value="951"/>
+      <details key="end" value="952"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/generateElement/%.1/%.3/%.3/%/%.5/%/%/%/%">
+      <details key="start" value="958"/>
+      <details key="end" value="964"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/generateElement/%.1/%.3/%.3/%/%.5/%/%/%/%/a">
+      <details key="start" value="958"/>
+      <details key="end" value="959"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/generateElement/%.1/%.3/%.3/%/%.5/%.1">
+      <details key="start" value="986"/>
+      <details key="end" value="987"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/generateElement/%.1/%.3/%.3/a">
+      <details key="start" value="896"/>
+      <details key="end" value="910"/>
+      <details key="line" value="27"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/generateElement/%.1/%.3/%.3/%.1">
+      <details key="start" value="914"/>
+      <details key="end" value="939"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/generateElement/%.1/%.3/%.3/%.1/%">
+      <details key="start" value="914"/>
+      <details key="end" value="924"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/generateElement/%.1/%.3/%.3/%.1/%/p">
+      <details key="start" value="914"/>
+      <details key="end" value="915"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/generateElement/%.1/%.3/%.4">
+      <details key="start" value="1081"/>
+      <details key="end" value="1282"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/generateElement/%.1/%.3/%.5">
+      <details key="start" value="1286"/>
+      <details key="end" value="2526"/>
+      <details key="line" value="44"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/generateElement/%.1/%.3/%.5/%">
+      <details key="start" value="1371"/>
+      <details key="end" value="2515"/>
+      <details key="line" value="45"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/generateElement/%.1/%.3/%.5/%/%">
+      <details key="start" value="1403"/>
+      <details key="end" value="1437"/>
+      <details key="line" value="46"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/generateElement/%.1/%.3/%.5/%/%.1">
+      <details key="start" value="1375"/>
+      <details key="end" value="1401"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.48" references="/0/generateElement/%.1/%.3/%.5/%/%.1/%">
+      <details key="start" value="1376"/>
+      <details key="end" value="1396"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.49" references="/0/generateElement/%.1/%.3/%.5/%/%.1/%/categorias">
+      <details key="start" value="1376"/>
+      <details key="end" value="1386"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.50" references="/0/generateElement/%.1/%.3/%.5/%/%.1/%.1">
+      <details key="start" value="1399"/>
+      <details key="end" value="1400"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/generateElement/%.1/%.3/%.5/%/%.2">
+      <details key="start" value="1442"/>
+      <details key="end" value="2510"/>
+      <details key="line" value="47"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%">
+      <details key="start" value="1455"/>
+      <details key="end" value="2504"/>
+      <details key="line" value="48"/>
+    </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%">
+      <details key="start" value="1507"/>
+      <details key="end" value="1549"/>
+      <details key="line" value="49"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.1">
+      <details key="start" value="1550"/>
+      <details key="end" value="1569"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.1/categoria">
+      <details key="start" value="1550"/>
+      <details key="end" value="1559"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.2">
+      <details key="start" value="1572"/>
+      <details key="end" value="1632"/>
+      <details key="line" value="51"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3">
+      <details key="start" value="1638"/>
+      <details key="end" value="2478"/>
+      <details key="line" value="55"/>
+    </eAnnotations>
+    <eAnnotations source="positions.58" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%">
+      <details key="start" value="1705"/>
+      <details key="end" value="2465"/>
+      <details key="line" value="56"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%">
+      <details key="start" value="1733"/>
+      <details key="end" value="1771"/>
+      <details key="line" value="57"/>
+    </eAnnotations>
+    <eAnnotations source="positions.60" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.1">
+      <details key="start" value="1709"/>
+      <details key="end" value="1731"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.61" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.1/%">
+      <details key="start" value="1710"/>
+      <details key="end" value="1726"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.62" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.1/%/vendas">
+      <details key="start" value="1710"/>
+      <details key="end" value="1716"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.63" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.1/%.1">
+      <details key="start" value="1729"/>
+      <details key="end" value="1730"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.64" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2">
+      <details key="start" value="1778"/>
+      <details key="end" value="2460"/>
+      <details key="line" value="58"/>
+    </eAnnotations>
+    <eAnnotations source="positions.65" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%">
+      <details key="start" value="1794"/>
+      <details key="end" value="2452"/>
+      <details key="line" value="59"/>
+    </eAnnotations>
+    <eAnnotations source="positions.66" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/%">
+      <details key="start" value="1825"/>
+      <details key="end" value="1938"/>
+      <details key="line" value="60"/>
+    </eAnnotations>
+    <eAnnotations source="positions.67" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/%.1">
+      <details key="start" value="1939"/>
+      <details key="end" value="1950"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.68" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/%.1/venda">
+      <details key="start" value="1939"/>
+      <details key="end" value="1944"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.69" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/%.2">
+      <details key="start" value="1953"/>
+      <details key="end" value="2002"/>
+      <details key="line" value="64"/>
+    </eAnnotations>
+    <eAnnotations source="positions.70" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/%.3">
+      <details key="start" value="2012"/>
+      <details key="end" value="2148"/>
+      <details key="line" value="66"/>
+    </eAnnotations>
+    <eAnnotations source="positions.71" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/%.3/%">
+      <details key="start" value="2059"/>
+      <details key="end" value="2102"/>
+      <details key="line" value="67"/>
+    </eAnnotations>
+    <eAnnotations source="positions.72" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/%.3/%.1">
+      <details key="start" value="2103"/>
+      <details key="end" value="2129"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.73" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/%.3/%.1/%">
+      <details key="start" value="2103"/>
+      <details key="end" value="2116"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.74" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/%.3/%.1/%/venda">
+      <details key="start" value="2103"/>
+      <details key="end" value="2108"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.75" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/%.3/%.1/%.1">
+      <details key="start" value="2122"/>
+      <details key="end" value="2128"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.76" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/%.3/%.2">
+      <details key="start" value="2132"/>
+      <details key="end" value="2133"/>
+      <details key="line" value="68"/>
+    </eAnnotations>
+    <eAnnotations source="positions.77" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/%.3/%.3">
+      <details key="start" value="2016"/>
+      <details key="end" value="2057"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.78" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/%.3/%.3/%">
+      <details key="start" value="2017"/>
+      <details key="end" value="2030"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.79" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/%.3/%.3/%/venda">
+      <details key="start" value="2017"/>
+      <details key="end" value="2022"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.80" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/%.3/%.3/%.1">
+      <details key="start" value="2043"/>
+      <details key="end" value="2055"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.81" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/%.4">
+      <details key="start" value="2161"/>
+      <details key="end" value="2309"/>
+      <details key="line" value="69"/>
+    </eAnnotations>
+    <eAnnotations source="positions.82" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/%.4/%">
+      <details key="start" value="2210"/>
+      <details key="end" value="2255"/>
+      <details key="line" value="70"/>
+    </eAnnotations>
+    <eAnnotations source="positions.83" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/%.4/%.1">
+      <details key="start" value="2256"/>
+      <details key="end" value="2290"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.84" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/%.4/%.1/%">
+      <details key="start" value="2256"/>
+      <details key="end" value="2269"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.85" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/%.4/%.1/%/venda">
+      <details key="start" value="2256"/>
+      <details key="end" value="2261"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.86" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/%.4/%.1/%.1">
+      <details key="start" value="2275"/>
+      <details key="end" value="2289"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.87" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/%.4/%.2">
+      <details key="start" value="2293"/>
+      <details key="end" value="2294"/>
+      <details key="line" value="71"/>
+    </eAnnotations>
+    <eAnnotations source="positions.88" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/%.4/%.3">
+      <details key="start" value="2165"/>
+      <details key="end" value="2208"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.89" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/%.4/%.3/%">
+      <details key="start" value="2166"/>
+      <details key="end" value="2179"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.90" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/%.4/%.3/%/venda">
+      <details key="start" value="2166"/>
+      <details key="end" value="2171"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.91" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/%.4/%.3/%.1">
+      <details key="start" value="2192"/>
+      <details key="end" value="2206"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.92" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/%.5">
+      <details key="start" value="2310"/>
+      <details key="end" value="2368"/>
+      <details key="line" value="72"/>
+    </eAnnotations>
+    <eAnnotations source="positions.93" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/%.6">
+      <details key="start" value="2369"/>
+      <details key="end" value="2384"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.94" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/%.6/venda">
+      <details key="start" value="2369"/>
+      <details key="end" value="2374"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.95" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/%.7">
+      <details key="start" value="2387"/>
+      <details key="end" value="2437"/>
+      <details key="line" value="75"/>
+    </eAnnotations>
+    <eAnnotations source="positions.96" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/venda">
+      <details key="start" value="1800"/>
+      <details key="end" value="1813"/>
+      <details key="line" value="59"/>
+    </eAnnotations>
+    <eAnnotations source="positions.97" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/%/%.2/%/vendas">
+      <details key="start" value="1816"/>
+      <details key="end" value="1822"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.98" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/vendas">
+      <details key="start" value="1643"/>
+      <details key="end" value="1696"/>
+      <details key="line" value="55"/>
+    </eAnnotations>
+    <eAnnotations source="positions.99" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/vendas/%">
+      <details key="start" value="1671"/>
+      <details key="end" value="1697"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.100" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/vendas/%/categoria">
+      <details key="start" value="1671"/>
+      <details key="end" value="1680"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.101" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.3/vendas/%/%">
+      <details key="start" value="1691"/>
+      <details key="end" value="1696"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.102" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/%.4">
+      <details key="start" value="2479"/>
+      <details key="end" value="2492"/>
+      <details key="line" value="81"/>
+    </eAnnotations>
+    <eAnnotations source="positions.103" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/categoria">
+      <details key="start" value="1461"/>
+      <details key="end" value="1490"/>
+      <details key="line" value="48"/>
+    </eAnnotations>
+    <eAnnotations source="positions.104" references="/0/generateElement/%.1/%.3/%.5/%/%.2/%/categorias">
+      <details key="start" value="1494"/>
+      <details key="end" value="1504"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.105" references="/0/generateElement/%.1/%.3/%.5/categorias">
+      <details key="start" value="1291"/>
+      <details key="end" value="1364"/>
+      <details key="line" value="44"/>
+    </eAnnotations>
+    <eAnnotations source="positions.106" references="/0/generateElement/%.1/%.3/%.5/categorias/%">
+      <details key="start" value="1335"/>
+      <details key="end" value="1365"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.107" references="/0/generateElement/%.1/%.3/%.5/categorias/%/p">
+      <details key="start" value="1335"/>
+      <details key="end" value="1336"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.108" references="/0/generateElement/%.1/%.3/%.5/categorias/%/%">
+      <details key="start" value="1347"/>
+      <details key="end" value="1364"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.109" references="/0/generateElement/%.1/%.3/%.6">
+      <details key="start" value="2527"/>
+      <details key="end" value="2620"/>
+      <details key="line" value="85"/>
+    </eAnnotations>
+    <eAnnotations source="positions.110" references="/0/generateElement/%.1/%.3/%.7">
+      <details key="start" value="2624"/>
+      <details key="end" value="3535"/>
+      <details key="line" value="91"/>
+    </eAnnotations>
+    <eAnnotations source="positions.111" references="/0/generateElement/%.1/%.3/%.7/%">
+      <details key="start" value="2713"/>
+      <details key="end" value="3524"/>
+      <details key="line" value="92"/>
+    </eAnnotations>
+    <eAnnotations source="positions.112" references="/0/generateElement/%.1/%.3/%.7/%/%">
+      <details key="start" value="2745"/>
+      <details key="end" value="2781"/>
+      <details key="line" value="93"/>
+    </eAnnotations>
+    <eAnnotations source="positions.113" references="/0/generateElement/%.1/%.3/%.7/%/%.1">
+      <details key="start" value="2717"/>
+      <details key="end" value="2743"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.114" references="/0/generateElement/%.1/%.3/%.7/%/%.1/%">
+      <details key="start" value="2718"/>
+      <details key="end" value="2738"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.115" references="/0/generateElement/%.1/%.3/%.7/%/%.1/%/categorias">
+      <details key="start" value="2718"/>
+      <details key="end" value="2728"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.116" references="/0/generateElement/%.1/%.3/%.7/%/%.1/%.1">
+      <details key="start" value="2741"/>
+      <details key="end" value="2742"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.117" references="/0/generateElement/%.1/%.3/%.7/%/%.2">
+      <details key="start" value="2786"/>
+      <details key="end" value="3519"/>
+      <details key="line" value="94"/>
+    </eAnnotations>
+    <eAnnotations source="positions.118" references="/0/generateElement/%.1/%.3/%.7/%/%.2/%">
+      <details key="start" value="2799"/>
+      <details key="end" value="3513"/>
+      <details key="line" value="95"/>
+    </eAnnotations>
+    <eAnnotations source="positions.119" references="/0/generateElement/%.1/%.3/%.7/%/%.2/%/%">
+      <details key="start" value="2852"/>
+      <details key="end" value="2894"/>
+      <details key="line" value="96"/>
+    </eAnnotations>
+    <eAnnotations source="positions.120" references="/0/generateElement/%.1/%.3/%.7/%/%.2/%/%.1">
+      <details key="start" value="2895"/>
+      <details key="end" value="2914"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.121" references="/0/generateElement/%.1/%.3/%.7/%/%.2/%/%.1/categoria">
+      <details key="start" value="2895"/>
+      <details key="end" value="2904"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.122" references="/0/generateElement/%.1/%.3/%.7/%/%.2/%/%.2">
+      <details key="start" value="2917"/>
+      <details key="end" value="2977"/>
+      <details key="line" value="98"/>
+    </eAnnotations>
+    <eAnnotations source="positions.123" references="/0/generateElement/%.1/%.3/%.7/%/%.2/%/%.3">
+      <details key="start" value="2983"/>
+      <details key="end" value="3487"/>
+      <details key="line" value="102"/>
+    </eAnnotations>
+    <eAnnotations source="positions.124" references="/0/generateElement/%.1/%.3/%.7/%/%.2/%/%.3/%">
+      <details key="start" value="3056"/>
+      <details key="end" value="3474"/>
+      <details key="line" value="103"/>
+    </eAnnotations>
+    <eAnnotations source="positions.125" references="/0/generateElement/%.1/%.3/%.7/%/%.2/%/%.3/%/%">
+      <details key="start" value="3086"/>
+      <details key="end" value="3126"/>
+      <details key="line" value="104"/>
+    </eAnnotations>
+    <eAnnotations source="positions.126" references="/0/generateElement/%.1/%.3/%.7/%/%.2/%/%.3/%/%.1">
+      <details key="start" value="3060"/>
+      <details key="end" value="3084"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.127" references="/0/generateElement/%.1/%.3/%.7/%/%.2/%/%.3/%/%.1/%">
+      <details key="start" value="3061"/>
+      <details key="end" value="3079"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.128" references="/0/generateElement/%.1/%.3/%.7/%/%.2/%/%.3/%/%.1/%/despesas">
+      <details key="start" value="3061"/>
+      <details key="end" value="3069"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.129" references="/0/generateElement/%.1/%.3/%.7/%/%.2/%/%.3/%/%.1/%.1">
+      <details key="start" value="3082"/>
+      <details key="end" value="3083"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.130" references="/0/generateElement/%.1/%.3/%.7/%/%.2/%/%.3/%/%.2">
+      <details key="start" value="3133"/>
+      <details key="end" value="3469"/>
+      <details key="line" value="105"/>
+    </eAnnotations>
+    <eAnnotations source="positions.131" references="/0/generateElement/%.1/%.3/%.7/%/%.2/%/%.3/%/%.2/%">
+      <details key="start" value="3149"/>
+      <details key="end" value="3461"/>
+      <details key="line" value="106"/>
+    </eAnnotations>
+    <eAnnotations source="positions.132" references="/0/generateElement/%.1/%.3/%.7/%/%.2/%/%.3/%/%.2/%/%">
+      <details key="start" value="3186"/>
+      <details key="end" value="3299"/>
+      <details key="line" value="107"/>
+    </eAnnotations>
+    <eAnnotations source="positions.133" references="/0/generateElement/%.1/%.3/%.7/%/%.2/%/%.3/%/%.2/%/%.1">
+      <details key="start" value="3300"/>
+      <details key="end" value="3313"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.134" references="/0/generateElement/%.1/%.3/%.7/%/%.2/%/%.3/%/%.2/%/%.1/despesa">
+      <details key="start" value="3300"/>
+      <details key="end" value="3307"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.135" references="/0/generateElement/%.1/%.3/%.7/%/%.2/%/%.3/%/%.2/%/%.2">
+      <details key="start" value="3316"/>
+      <details key="end" value="3375"/>
+      <details key="line" value="111"/>
+    </eAnnotations>
+    <eAnnotations source="positions.136" references="/0/generateElement/%.1/%.3/%.7/%/%.2/%/%.3/%/%.2/%/%.3">
+      <details key="start" value="3376"/>
+      <details key="end" value="3393"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.137" references="/0/generateElement/%.1/%.3/%.7/%/%.2/%/%.3/%/%.2/%/%.3/despesa">
+      <details key="start" value="3376"/>
+      <details key="end" value="3383"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.138" references="/0/generateElement/%.1/%.3/%.7/%/%.2/%/%.3/%/%.2/%/%.4">
+      <details key="start" value="3396"/>
+      <details key="end" value="3446"/>
+      <details key="line" value="114"/>
+    </eAnnotations>
+    <eAnnotations source="positions.139" references="/0/generateElement/%.1/%.3/%.7/%/%.2/%/%.3/%/%.2/%/despesa">
+      <details key="start" value="3155"/>
+      <details key="end" value="3172"/>
+      <details key="line" value="106"/>
+    </eAnnotations>
+    <eAnnotations source="positions.140" references="/0/generateElement/%.1/%.3/%.7/%/%.2/%/%.3/%/%.2/%/despesas">
+      <details key="start" value="3175"/>
+      <details key="end" value="3183"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.141" references="/0/generateElement/%.1/%.3/%.7/%/%.2/%/%.3/despesas">
+      <details key="start" value="2988"/>
+      <details key="end" value="3047"/>
+      <details key="line" value="102"/>
+    </eAnnotations>
+    <eAnnotations source="positions.142" references="/0/generateElement/%.1/%.3/%.7/%/%.2/%/%.3/despesas/%">
+      <details key="start" value="3020"/>
+      <details key="end" value="3048"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.143" references="/0/generateElement/%.1/%.3/%.7/%/%.2/%/%.3/despesas/%/categoria">
+      <details key="start" value="3020"/>
+      <details key="end" value="3029"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.144" references="/0/generateElement/%.1/%.3/%.7/%/%.2/%/%.3/despesas/%/%">
+      <details key="start" value="3040"/>
+      <details key="end" value="3047"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.145" references="/0/generateElement/%.1/%.3/%.7/%/%.2/%/%.4">
+      <details key="start" value="3488"/>
+      <details key="end" value="3501"/>
+      <details key="line" value="120"/>
+    </eAnnotations>
+    <eAnnotations source="positions.146" references="/0/generateElement/%.1/%.3/%.7/%/%.2/%/categoria">
+      <details key="start" value="2805"/>
+      <details key="end" value="2836"/>
+      <details key="line" value="95"/>
+    </eAnnotations>
+    <eAnnotations source="positions.147" references="/0/generateElement/%.1/%.3/%.7/%/%.2/%/categorias">
+      <details key="start" value="2839"/>
+      <details key="end" value="2849"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.148" references="/0/generateElement/%.1/%.3/%.7/categorias">
+      <details key="start" value="2629"/>
+      <details key="end" value="2706"/>
+      <details key="line" value="91"/>
+    </eAnnotations>
+    <eAnnotations source="positions.149" references="/0/generateElement/%.1/%.3/%.7/categorias/%">
+      <details key="start" value="2675"/>
+      <details key="end" value="2707"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.150" references="/0/generateElement/%.1/%.3/%.7/categorias/%/p">
+      <details key="start" value="2675"/>
+      <details key="end" value="2676"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.151" references="/0/generateElement/%.1/%.3/%.7/categorias/%/%">
+      <details key="start" value="2687"/>
+      <details key="end" value="2706"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.152" references="/0/generateElement/%.1/%.3/%.8">
+      <details key="start" value="3536"/>
+      <details key="end" value="3581"/>
+      <details key="line" value="124"/>
+    </eAnnotations>
+    <eAnnotations source="positions.153" references="/0/generateElement/%.1/%.3/p">
+      <details key="start" value="631"/>
+      <details key="end" value="650"/>
+      <details key="line" value="20"/>
+    </eAnnotations>
+    <eAnnotations source="positions.154" references="/0/generateElement/%.1/%.3/%.9">
+      <details key="start" value="653"/>
+      <details key="end" value="675"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.155" references="/0/generateElement/%.1/%.3/%.9/grupoMEI">
+      <details key="start" value="653"/>
+      <details key="end" value="661"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.156" references="/0/generateElement/%.1/%.4">
+      <details key="start" value="3589"/>
+      <details key="end" value="3607"/>
+      <details key="line" value="130"/>
+    </eAnnotations>
+    <eAnnotations source="positions.157" references="/0/generateElement/%.1/%.5">
+      <details key="start" value="211"/>
+      <details key="end" value="223"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.158" references="/0/generateElement/%.2">
+      <details key="start" value="3615"/>
+      <details key="end" value="3616"/>
+      <details key="line" value="133"/>
+    </eAnnotations>
+    <eAnnotations source="positions.159" references="/0/generateElement/grupoMEI">
+      <details key="start" value="163"/>
+      <details key="end" value="182"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>
